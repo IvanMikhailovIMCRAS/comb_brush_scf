@@ -16,17 +16,17 @@ def script_creation(N: int, n: int, m: int, sigma: float) -> None:
 
     theta = (1+N+(N//m-1)*n)*sigma
 
-    with open('brush.in', 'w') as file1:
+    with open('data/brush.in', 'w') as file1:
         file1.writelines(
             f"""
     lat : flat : n_layers : {N+n}
     lat : flat : geometry : flat
     lat : flat : lambda : 0.16666666666666666667
     lat : flat : lowerbound : surface
-    lat : flat : upperbound : surface
+    lat : flat : upperbound : mirror1
 
     mon : solid : freedom : frozen
-    mon : solid : frozen_range : upperbound
+    mon : solid : frozen_range : lowerbound
     mon : W : freedom : free
     mon : X: freedom : pinned
     mon : X : pinned_range : 1
@@ -40,7 +40,7 @@ def script_creation(N: int, n: int, m: int, sigma: float) -> None:
     mol : pol : theta : {theta}
 
     output : filename.pro : type : profiles
-    output : filename.pro : template : profile.template
+    output : filename.pro : template : data/profile.template
 
     start
     
