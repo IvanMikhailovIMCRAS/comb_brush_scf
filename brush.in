@@ -1,0 +1,27 @@
+
+    lat : flat : n_layers : 30
+    lat : flat : geometry : flat
+    lat : flat : lambda : 0.16666666666666666667
+    lat : flat : lowerbound : surface
+    lat : flat : upperbound : surface
+
+    mon : solid : freedom : frozen
+    mon : solid : frozen_range : upperbound
+    mon : W : freedom : free
+    mon : X: freedom : pinned
+    mon : X : pinned_range : 1
+    mon : A : freedom : free
+    
+    mol : solvent : composition : (W)1
+    mol : solvent : freedom : solvent
+
+    mol : pol : composition : (X)1((A)2[(A)10])9(A)2
+    mol : pol : freedom : restricted
+    mol : pol : theta : 1.11
+
+    output : filename.pro : type : profiles
+    output : filename.pro : template : profile.template
+
+    start
+    
+    

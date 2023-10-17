@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "comb-brush-scf"
+version = "0.1.0"
+description = ""
+authors = ["Ivan Mikhailov <mikhailov.ivan@gmail.com>"]
+readme = "README.md"
+packages = [{include = "comb_brush_scf"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<=3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
